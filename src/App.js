@@ -18,11 +18,13 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
 
-      {
-        guns.map(gun => (
-          <Card key={gun.id} gun={gun}></Card>
-        ))
-      }
+      <div className="card-container">
+        {
+          guns && guns.map(gun => (
+            <Card key={gun.id} gun={gun}></Card>
+          ))
+        }
+      </div>
     </div>
   );
 }
