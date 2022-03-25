@@ -14,6 +14,10 @@ function App() {
 
   console.log(guns);
 
+  const handleAddToCart = (id) => {
+    console.log(id);
+  }
+
   return (
     <div className="App">
       <Navbar></Navbar>
@@ -21,7 +25,7 @@ function App() {
       <div className="card-container">
         {
           guns && guns.map(gun => (
-            <Card key={gun.id} gun={gun}></Card>
+            <Card key={gun.id} gun={gun} handleAddToCart={handleAddToCart}></Card>
           ))
         }
       </div>
